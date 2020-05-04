@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recipe Details{% endblock %}
+
+{% block body %}
+    <div class="container text-center">
+
+
+
+                    <img class="img-fluid" src="{{ cake.image }}" alt="Card image cap">
+                        <h2 class="">{{ cake.name }}</h2>
+                        <p class="">Category: {{ cake.category }}</p>
+                        <p class="">Language: {{ cake.language }}</p>
+                        <p class="">Description: <br>{{ cake.description }}</p>
+                        <p class="">Estimated calories: {{ cake.calories }}</p>
+                        <p class="">Author: {{ cake.author }}</p>
+                        <p class="">Published Date: {{ cake.publishDate|date('F j, Y, g:i a')  }}</p>
+                        <p class=""><a href="{{ cake.recipeLink }}" target="_blank" class="btn btn-light">Here the Recipe</a></p>
+
+
+        </div>
+{% endblock %}

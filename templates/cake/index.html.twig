@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <div class="container ">
+        <div class=" row text-center d-flex justify-content-center">
+            {% for cake in  cakes  %}
+
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ cake.image }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ cake.name }}</h5>
+                        <p class="card-text">Category: {{ cake.category }}</p>
+                        <p class="card-text">Language: {{ cake.language }}</p>
+                        <a href="/user/details/{{ cake.id }}" class="btn btn-secondary">Details</a>
+                        <a href="/user/delete/{{ cake.id }}" class="btn btn-danger">Delete</a>
+                        <a href="/user/edit/{{ cake.id }}" class="btn btn-warning">Edit</a>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

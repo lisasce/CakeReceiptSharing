@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Lisa">
+    <meta name="sweet cakes" content="first symfony CRUD">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="/">
+    <!-- bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <style>
+
+        .jumbotron {
+            background-image: url("https://cdn.pixabay.com/photo/2016/07/01/18/25/cake-pops-1491619_960_720.jpg");
+            background-size: cover;
+        }
+    </style>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% include('nav.html.twig') %}
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4 pl-3">Welcome to Sweet Cake Ô my sweet cake!</h1>
+        <p class="lead pl-3">This is a public sharing Website for cake recipe. Feel free to add your delicious secrets!</p>
+        <hr class="my-4">
+        <p class="text-center">Standard, Vegan , Glutenfree or even Vegan and gf, discover sweet cakes or desserts in French , English or German...</p>
+
+
+        <p class="text-center"><a class="btn btn-light btn-lg" href="/user/create" role="button">Add your secret cake here</a></p>
+
+    </div>
+</div>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

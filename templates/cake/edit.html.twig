@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Recipe{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2 class="page-header">Edit Recipe</h2>
+        {{form_start(form)}}
+        {{form_widget(form)}}
+        {{form_end(form)}}
+    </div>
+{% endblock %}
